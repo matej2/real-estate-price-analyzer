@@ -11,7 +11,7 @@ class Main:
         soup = BeautifulSoup(self.get_content().text, 'html.parser')
         selector = Selector(soup)
 
-        print(selector.get_value())
+        print(selector.get_average_price())
 
     def get_content(self):
         response = self.clf.get("https://www.nepremicnine.net/oglasi-prodaja/ljubljana-mesto/lj-siska/stanovanje/")
